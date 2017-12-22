@@ -1,0 +1,89 @@
+<template name="formLayout">
+<head>
+
+</head>
+<body>
+
+<meta charset="UTF-8">
+<title>Form</title>
+<form class="patient-form">
+    <h1>Should you have any questions, please do not hesitate to contact me :</h1>
+
+    <div class="contentform">
+        <div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+        <div class="leftcontact">
+            <div class="form-group">
+                <p>Legal Name<span>*</span></p>
+                <input type="text" name="legalName" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p>Date of Birth <span>*</span></p>
+                <input type="text" name="birthDate" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+        </div>
+        <div class="rightcontact">
+            <div class="form-group">
+                <p>Care Card Number (PHN)<span>*</span></p>
+                <input type="text" name="phn" data-rule="email" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p>Reason for Visit <span>*</span></p>
+                <input type="text" name="visitReason"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+        </div>
+            <div class="form-group">
+                <p>Description of Symptoms (as much detail as possible)<span>*</span></p>
+                <input type="text" name="symptomDesc" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p> When Did Symptoms Begin <span>*</span></p>
+                <input type="text" name="symptomBegin" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p>Medical History <span>*</span></p>
+                <input type="text" name="history"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p>Allergies <span>*</span></p>
+                <input type="text" name="allergies" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+                <div class="validation"></div>
+            </div>
+
+          <div class="form-group">
+             <p> Current Medication <span>*</span></p>
+            <input type="text" name="medication"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+            <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p> Do you smoke? <span>*</span></p>
+                <input type="text" name="smoke"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+
+            <div class="form-group">
+                <p> Do you consume alcohol? <span>*</span></p>
+                <input type="text" name="alcohol" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné."/>
+                <div class="validation"></div>
+            </div>
+
+    </div>
+    <button type="submit" class="bouton-contact">Submit</button>
+</form>
+<button class="button" id="backBtn">Go Back</button>
+</body>
+</template>
