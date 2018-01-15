@@ -3,6 +3,8 @@
  */
 import {PatientRecords} from "/collections/patient-record"
 import swal from 'sweetalert';
+import { Meteor } from 'meteor/meteor';
+
 
 
 Router.route("formLayout");
@@ -19,19 +21,33 @@ if (Meteor.isClient){
         }
     })
 
+    Template.formLayout.events({
+        'click #sendEmail' : function (){
+            console.log("Sending mail here!")
+            Meteor.call("send_email", function(error, response){
+                if (error){
+                    return false;
+                }
+                else return response;
+            })
+        }
+    })
+
+
   Template.formLayout.events({
     'submit .patient-form' : function(event) {
-        var legalName    = event.target.legalName.value;
-        var phn          = event.target.phn.value;
-        var birthDate    = event.target.birthDate.value;
-        var visitReason  = event.target.visitReason.value;
-        var symptomDesc  = event.target.symptomDesc.value;
+          console.log("submitting form");
+        var legalName = event.target.legalName.value;
+        var phn = event.target.phn.value;
+        var birthDate = event.target.birthDate.value;
+        var visitReason = event.target.visitReason.value;
+        var symptomDesc = event.target.symptomDesc.value;
         var symptomBegin = event.target.symptomBegin.value;
-        var history      = event.target.history.value;
-        var allergies    = event.target.allergies.value;
-        var medication   = event.target.medication.value;
-        var smoke        = event.target.smoke.value;
-        var alcohol      = event.target.alcohol.value
+        var history = event.target.history.value;
+        var allergies = event.target.allergies.value;
+        var medication = event.target.medication.value;
+        var smoke = event.target.smoke.value;
+        var alcohol = event.target.alcohol.value
 
         if (legalName == ""
             || phn == ""
@@ -56,7 +72,7 @@ if (Meteor.isClient){
                 createdAt: new Date(),
                 legalName: legalName,
                 phn: phn,
-                birthDate: birthDate ,
+                birthDate: birthDate,
                 visitReason: visitReason,
                 symptomDesc: symptomDesc,
                 symptomBegin: symptomBegin,
