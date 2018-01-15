@@ -16,68 +16,75 @@
         <div class="leftcontact">
             <div class="form-group">
                 <p>Legal Name<span>*</span></p>
-                <input type="text" name="legalName" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+                <input type="text" name="legalName" data-rule="required"/>
                 <div class="validation"></div>
             </div>
 
             <div class="form-group">
                 <p>Date of Birth <span>*</span></p>
-                <input type="text" name="birthDate" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné."/>
+                <input type="text" name="birthDate" data-rule="required" />
                 <div class="validation"></div>
             </div>
         </div>
         <div class="rightcontact">
             <div class="form-group">
                 <p>Care Card Number (PHN)<span>*</span></p>
-                <input type="text" name="phn" data-rule="email" data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                <input type="text" name="phn" data-rule="email" />
+                <div class="validation"></div>
+            </div>
+            <div class="form-group">
+                <p>Appointment Date (YYYY-MM-DD)<span>*</span></p>
+                <input type="text" name="aptTime"  data-rule="required" />
                 <div class="validation"></div>
             </div>
 
-            <div class="form-group">
-                <p>Reason for Visit <span>*</span></p>
-                <input type="text" name="visitReason"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
-                <div class="validation"></div>
-            </div>
         </div>
-            <div class="form-group">
+
+        <div class="form-group">
+            <p>Reason for Visit <span>*</span></p>
+            <input type="text" name="visitReason"  data-rule="required"/>
+            <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
                 <p>Description of Symptoms (as much detail as possible)<span>*</span></p>
-                <input type="text" name="symptomDesc" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné."/>
+                <input type="text" name="symptomDesc"/>
                 <div class="validation"></div>
             </div>
 
             <div class="form-group">
                 <p> When Did Symptoms Begin <span>*</span></p>
-                <input type="text" name="symptomBegin" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Code postal' doit être renseigné."/>
+                <input type="text" name="symptomBegin"/>
                 <div class="validation"></div>
             </div>
 
             <div class="form-group">
                 <p>Medical History <span>*</span></p>
-                <input type="text" name="history"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+                <input type="text" name="history"/>
                 <div class="validation"></div>
             </div>
 
             <div class="form-group">
                 <p>Allergies <span>*</span></p>
-                <input type="text" name="allergies" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+                <input type="text" name="allergies" />
                 <div class="validation"></div>
             </div>
 
           <div class="form-group">
              <p> Current Medication <span>*</span></p>
-            <input type="text" name="medication"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+            <input type="text" name="medication"/>
             <div class="validation"></div>
             </div>
 
             <div class="form-group">
                 <p> Do you smoke? <span>*</span></p>
-                <input type="text" name="smoke"  data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+                <input type="text" name="smoke"/>
                 <div class="validation"></div>
             </div>
 
             <div class="form-group">
                 <p> Do you consume alcohol? <span>*</span></p>
-                <input type="text" name="alcohol" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné."/>
+                <input type="text" name="alcohol"/>
                 <div class="validation"></div>
             </div>
 
@@ -85,7 +92,7 @@
     <button type="submit" class="bouton-contact">Submit</button>
 
 </form>
-<button id="sendEmail" class="button">Send Email</button>
+
 <button class="button" id="backBtn">Go Back</button>
 </body>
 </template>

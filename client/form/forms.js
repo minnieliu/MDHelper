@@ -21,19 +21,6 @@ if (Meteor.isClient){
         }
     })
 
-    Template.formLayout.events({
-        'click #sendEmail' : function (){
-            console.log("Sending mail here!")
-            Meteor.call("send_email", function(error, response){
-                if (error){
-                    return false;
-                }
-                else return response;
-            })
-        }
-    })
-
-
   Template.formLayout.events({
     'submit .patient-form' : function(event) {
           console.log("submitting form");

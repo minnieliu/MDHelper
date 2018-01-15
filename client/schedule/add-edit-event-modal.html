@@ -18,7 +18,7 @@
                     <label for="type">Appointment Type</label>
                     <select name="type" id = "type" class="form-control">
                         <option selected="{{selected event.type 'Consultation' }}" value="Consultation">Consultation</option>
-                        <option selected="{{selected event.type 'Med Refill' }}" value="Med_Refill">Med_Refill</option>
+                        <option selected="{{selected event.type 'Med Refill' }}" value="Med_Refill">Med Refill</option>
                         <option selected="{{selected event.type 'Miscellaneous' }}" value="Miscellaneous">Miscellaneous</option>
                     </select>
                 </div>
@@ -26,7 +26,7 @@
 
                 <div class="col-xs-12 col-sm-6">
                     <label for="start">Appointment Starts</label>
-                    <input disabled type="text"  id = "start" name="start" class="form-control" value="{{event.start}}">
+                    <input type="text"  id = "start" name="start" class="form-control" value="{{event.start}}">
                 </div>
 
                 <div class="col-xs-12 col-sm-2">
