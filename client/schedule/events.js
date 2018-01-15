@@ -82,7 +82,16 @@ Template.addEditEventModal.events({
             });
             return false;
         }
-        else {
+
+        var aptTime = startDate + startHour + ":" + startMin;
+        if (Appointments.findOne({ aptTime: aptTime}) != null){
+            swal({
+                title: "Submission failed",
+                text: "Time Unavaliable, please select a different time!",
+                icon: "error",
+            });
+        }
+            else {
             Appointments.insert({
                 createdAt: new Date(),
                 legalName: lastName + "," + firstName,
