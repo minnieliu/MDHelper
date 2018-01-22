@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>HTML email test</title>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+    }
+</style>
+<body itemscope itemtype="http://schema.org/EmailMessage">
+<table>
+    <tr>
+        <td width="600">
+            <table width="100%" style="border: 1px solid #eee;">
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Legal Name</th>
+                    <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{name}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">PHN</th>
+                    <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{phn}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Appointment Date</th>
+                    <td style="text-align: left; padding: 10px;">{{aptTime}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Birth Date</th>
+                    <td style="text-align: left; padding: 10px;">{{birthDate}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Reason for Visit</th>
+                    <td style="text-align: left; padding: 10px;">{{visitReason}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Symptoms</th>
+                    <td style="text-align: left; padding: 10px;">{{symptomDesc}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Symptoms Start</th>
+                    <td style="text-align: left; padding: 10px;">{{symptomBegin}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Medical History</th>
+                    <td style="text-align: left; padding: 10px;">{{history}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Allergies</th>
+                    <td style="text-align: left; padding: 10px;">{{allergies}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Current Medication</th>
+                    <td style="text-align: left; padding: 10px;">{{medication}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Smoke?</th>
+                    <td style="text-align: left; padding: 10px;">{{smoke}}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Alcohol?</th>
+                    <td style="text-align: left; padding: 10px;">{{alcohol}}</td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+

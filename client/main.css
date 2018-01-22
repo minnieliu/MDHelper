@@ -77,7 +77,8 @@ h1 {
     text-shadow: 1px 1px 0px #FFF;
     margin:50px 0px 0px 0px;
     font-size: 65px;
-    text-align:center
+    text-align:center;
+    font-weight: bold;
 }
 h2 {
     color: #66add1;

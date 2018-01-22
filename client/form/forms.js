@@ -24,8 +24,10 @@ if (Meteor.isClient){
   Template.formLayout.events({
     'submit .patient-form' : function(event) {
           console.log("submitting form");
+
         var legalName = event.target.legalName.value;
         var phn = event.target.phn.value;
+        var aptTime = event.target.aptTime.value;
         var birthDate = event.target.birthDate.value;
         var visitReason = event.target.visitReason.value;
         var symptomDesc = event.target.symptomDesc.value;
@@ -38,6 +40,7 @@ if (Meteor.isClient){
 
         if (legalName == ""
             || phn == ""
+            || aptTime == ""
             || birthDate == ""
             || visitReason == ""
             || symptomDesc == ""
@@ -59,6 +62,7 @@ if (Meteor.isClient){
                 createdAt: new Date(),
                 legalName: legalName,
                 phn: phn,
+                aptTime: aptTime,
                 birthDate: birthDate,
                 visitReason: visitReason,
                 symptomDesc: symptomDesc,
@@ -72,6 +76,7 @@ if (Meteor.isClient){
             // setting the value to blank and prevent pg from refreshing
             event.target.legalName.value = "";
             event.target.phn.value = "";
+            event.target.aptTime.value = "";
             event.target.birthDate.value = "";
             event.target.visitReason.value = "";
             event.target.symptomDesc.value = "";
@@ -86,6 +91,8 @@ if (Meteor.isClient){
                 text: "We received your submission.",
                 icon: "success",
             });
+
+            Meteor.call('send_email');
             return false;
         }
     }

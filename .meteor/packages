@@ -35,3 +35,6 @@ peppelg:bootstrap-3-modal
 email
 percolate:synced-cron
 aldeed:scheduled-tasks
+meteorhacks:ssr
+meteorhacks:kadira@2.27.2
+mquandalle:jade
