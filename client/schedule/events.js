@@ -13,8 +13,16 @@ Template.body.rendered = function () {
 
 Template.eventLayout.events({
     'click #backBtn': function(){
-        Router.go('/');}
+        Router.go('/')
+        $(window).scrollTop(0);
+        this.next();},
+    'click #formBtn' : function(){
+        Router.go('/formLayout')
+        $(window).scrollTop(0);
+        this.next();
+    }
 })
+
 
 Template.eventLayout.onRendered(() =>{
     $( '#events-calendar' ).fullCalendar({
